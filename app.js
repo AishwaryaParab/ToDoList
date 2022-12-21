@@ -12,7 +12,9 @@ app.set("view engine", "ejs");
 app.use(express.urlencoded({ extended: true }));
 app.use(express.static("public"));
 
-mongoose.connect("mongodb+srv://admin-aishwarya:Test123@cluster0.w4rrrly.mongodb.net/todolistDB");
+// mongoose.connect("mongodb+srv://admin-aishwarya:Test123@cluster0.w4rrrly.mongodb.net/todolistDB");   to connect to atlas
+
+mongoose.connect("mongodb://localhost:27017/todolistDB");
 
 // creating todolist Schema
 const itemSchema = new mongoose.Schema({
